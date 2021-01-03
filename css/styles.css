@@ -6,27 +6,8 @@
 
 	--gray-light: #6c757d;
 }
-@keyframes slideUp {
-	0% {
-		opacity: 1;
-		transform: translateY(100px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
 * {
 	font-family: 'Spartan', sans-serif;
-}
-.slide-up {
-	opacity: 0;
-	transform: translateY(100px);
-	animation-name: slideUp;
-	animation-duration: 1s;
-	animation-delay: .5s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
 }
 html, body {
 	font-size: 0.9rem;

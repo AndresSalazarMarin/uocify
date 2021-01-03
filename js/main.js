@@ -20,8 +20,7 @@ window.onload = () => {
 
 $(document).ready( function () {
 	// Constante para petición y no inhabilite la por CORS al solicitar información a la API
-	// const corsUrl = "https://cors-anywhere.herokuapp.com/";
-	const corsUrl = "https://thingproxy.freeboard.io/fetch/";
+	const corsUrl = "https://cors-anywhere.herokuapp.com/";
 
 	// Función para regresar en la navegación de la PWA
 	function back (e) {
@@ -85,7 +84,7 @@ $(document).ready( function () {
 
     // Conexión a API Deezer para busqueda de tracks
 	function getTracks( query ) {
-		$.get(`https://api.deezer.com/search/track?q=${query}`, function (data) {
+		$.get(`${corsUrl}https://api.deezer.com/search/track?q=${query}`, function (data) {
 			var tracks = data.data;
 
 	    	$('#nb_tracks').html( tracks.length );
@@ -98,7 +97,7 @@ $(document).ready( function () {
 
 	// Conexión a API Deezer para busqueda de artistas
 	function getArtists( query ) {
-		$.get(`https://api.deezer.com/search/artist?q=${query}`, function (data) {
+		$.get(`${corsUrl}https://api.deezer.com/search/artist?q=${query}`, function (data) {
 	    	var artists = data.data;
 
 			$('#qt-artists').html( artists.length );
@@ -111,7 +110,7 @@ $(document).ready( function () {
 
 	// Conexión a API Deezer para busqueda de albumes
 	function getAlbums( query ) {
-		$.get(`https://api.deezer.com/search/album?q=${query}`, function (data) {
+		$.get(`${corsUrl}https://api.deezer.com/search/album?q=${query}`, function (data) {
 			var albums = data.data;
 
 			$('#qt-albumes').html(albums.length);
@@ -317,7 +316,7 @@ $(document).ready( function () {
 		`;
 		$('#main').html(html);
 
-		$.get(``+album.tracklist, function (data) {
+		$.get(`${corsUrl}`+album.tracklist, function (data) {
 			var result = '';
 			result = renderTracks(data.data);
 			$('#songs').html(result);
@@ -339,7 +338,7 @@ $(document).ready( function () {
 				</div>
 			</div>`;
 		var result = "";
-		$.get(`https://api.deezer.com/chart/0/playlists`, function (data) {
+		$.get(`${corsUrl}https://api.deezer.com/chart/0/playlists`, function (data) {
 			$('#loading').attr('style', 'display: none!important');
 			result = `<div class="container mt-4 slide-up" id="albums-home">
 						<div class="row">`;
@@ -359,12 +358,6 @@ $(document).ready( function () {
 			$('.each-album').on('click', loadPlaylist);
 	    });
 	}
-
-	// var animated = $('.slide-up');
-
-	// animated.addEventListener('animationend', () => {
-	// 	animated.removeClass('slide-up');
-	// });
 
 	// Captura de evento click en elementos con la clase .back
 	$(document).on('click', '.back', back);
