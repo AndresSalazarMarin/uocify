@@ -85,7 +85,7 @@ $(document).ready( function () {
 
     // Conexión a API Deezer para busqueda de tracks
 	function getTracks( query ) {
-		$.get(`${corsUrl}https://api.deezer.com/search/track?q=${query}`, function (data) {
+		$.get(`https://api.deezer.com/search/track?q=${query}`, function (data) {
 			var tracks = data.data;
 
 	    	$('#nb_tracks').html( tracks.length );
@@ -98,7 +98,7 @@ $(document).ready( function () {
 
 	// Conexión a API Deezer para busqueda de artistas
 	function getArtists( query ) {
-		$.get(`${corsUrl}https://api.deezer.com/search/artist?q=${query}`, function (data) {
+		$.get(`https://api.deezer.com/search/artist?q=${query}`, function (data) {
 	    	var artists = data.data;
 
 			$('#qt-artists').html( artists.length );
@@ -111,7 +111,7 @@ $(document).ready( function () {
 
 	// Conexión a API Deezer para busqueda de albumes
 	function getAlbums( query ) {
-		$.get(`${corsUrl}https://api.deezer.com/search/album?q=${query}`, function (data) {
+		$.get(`https://api.deezer.com/search/album?q=${query}`, function (data) {
 			var albums = data.data;
 
 			$('#qt-albumes').html(albums.length);
@@ -317,7 +317,7 @@ $(document).ready( function () {
 		`;
 		$('#main').html(html);
 
-		$.get(`${corsUrl}`+album.tracklist, function (data) {
+		$.get(``+album.tracklist, function (data) {
 			var result = '';
 			result = renderTracks(data.data);
 			$('#songs').html(result);
@@ -339,7 +339,7 @@ $(document).ready( function () {
 				</div>
 			</div>`;
 		var result = "";
-		$.get(`${corsUrl}https://api.deezer.com/chart/0/playlists`, function (data) {
+		$.get(`https://api.deezer.com/chart/0/playlists`, function (data) {
 			$('#loading').attr('style', 'display: none!important');
 			result = `<div class="container mt-4 slide-up" id="albums-home">
 						<div class="row">`;
