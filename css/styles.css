@@ -1,0 +1,152 @@
+:root {
+	--weight-400: 400;
+	--weight-600: 600;
+	--weight-700: 700;
+	--weight-900: 900;
+
+	--gray-light: #6c757d;
+}
+@keyframes slideUp {
+	0% {
+		opacity: 1;
+		transform: translateY(100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+* {
+	font-family: 'Spartan', sans-serif;
+}
+.slide-up {
+	opacity: 0;
+	transform: translateY(100px);
+	animation-name: slideUp;
+	animation-duration: 1s;
+	animation-delay: .5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+html, body {
+	font-size: 0.9rem;
+}
+a, a:hover {
+	text-decoration: none;
+}
+#albums-home a {
+	color: #000;
+}
+#albums-home a img{
+	transition: 0.5s all ease;
+	transform: scale(1);
+}
+#albums-home a:hover img{
+	box-shadow: 0 0 10px #7c7c7c;
+	transform: scale(1.01);
+}
+.back {
+	padding: .5em .75em;
+	margin-bottom: 1em;
+	color: var(--red);
+	border: 2px solid var(--red);
+}
+.back:hover {
+	background-color: var(--red);
+	color: var(--white);
+}
+audio {
+	position: fixed;
+	top: -100px;
+	left: -100px;
+	z-index: -1;
+}
+.weight-400 {
+	font-weight: 400;
+}
+.weight-600 {
+	font-weight: 600;
+}
+.weight-700 {
+	font-weight: 700;
+}
+.weight-900 {
+	font-weight: 900;
+}
+.img-song {
+	width: 30px;
+	height: 30px;
+}
+.logo-home {
+	width: 200px;
+	margin-bottom: 1em;
+}
+.btn-simple {
+	border: 0;
+	background-color: transparent;
+}
+.btn-simple:hover,
+.btn-simple:active,
+.btn-simple:focus {
+	background-color: transparent!important;
+	color: var(--dark)!important;
+	box-shadow: none!important;
+}
+.input-simple {
+	border: 0;
+	border-bottom: 1px solid var(--gray-light);
+	border-radius: 0;
+}
+.input-simple:focus {
+	border-bottom: 0;
+	box-shadow: none;
+}
+.overflow-y {
+	overflow-y: hidden;
+}
+.nav-tabs {
+	border-bottom: 0;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+}
+.nav-tabs .nav-link {
+	color: var(--dark);
+	transition: .25s all ease;
+	border: 0;
+	position: relative;
+}
+.nav-tabs .nav-link span {
+	position: relative;
+}
+.nav-tabs .nav-item.show .nav-link span,
+.nav-tabs .nav-link:hover span,
+.nav-tabs .nav-link.active span {
+	color: var(--dark);
+	font-weight: var(--weight-700);
+}
+.nav-tabs .nav-item.show .nav-link span:after,
+.nav-tabs .nav-link:hover span:after,
+.nav-tabs .nav-link.active span:after {
+	content: "";
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	background-color: var(--red);
+	z-index: 2;
+}
+.table td,
+.table th {
+	vertical-align: middle;
+}
+
+.more-dots {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#all-results {
+	display: none;
+}

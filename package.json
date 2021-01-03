@@ -1,0 +1,15 @@
+{
+  "name": "uocify",
+  "version": "1.0.0",
+  "description": "Uocify final",
+  "main": "index.html",
+  "scripts": {
+    "scss": "node-sass --watch scss/main.scss -o css",
+    "serve": "http-server -p 8080 -a localhost -c 0"
+  },
+  "author": "Anna Ferry",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "devDependencies": {}
+}

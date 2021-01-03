@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+
+	<link rel="manifest" href="/manifest.json">
+	<meta name="theme-color" content="#3367D6">
+	<!-- Meta viewport para responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Uocify | Resultados</title>
+	<link rel="icon" type="image/png" href="images/logos/uocify_icon.png" />
+	<link rel="apple-touch-icon" href="images/logos/uocify_icon.png">
+	<!-- Importar fuentes -->
+	<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+	<!-- Importar Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Importar FontAwesome -->
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light">
+	<header>
+		<!-- Menú de Navegación -->
+		<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
+			<a class="navbar-brand link-home" href="/">
+				<img src="/images/logos/uocify_logo.svg" height="35" class="d-inline-block align-top" alt="" loading="lazy">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<!-- Formualrio de busqueda -->
+						<form action="" id="search-form" method="GET">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<button type="submit" class="btn btn-outline-secondary btn-simple" type="button" id="button-addon1">
+										<i class="fa fa-search"></i>
+									</button>
+								</div>
+								<input type="text" id="search" name="search" class="form-control input-simple" placeholder="Buscar..." aria-label="Example text with button addon" aria-describedby="button-addon1" required="">
+							</div>
+						</form>
+					</li>
+				</ul>
+				<div class="dropdown">
+					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="weight-600 mr-3">Carlos</span> <i class="fa fa-user"></i>
+					</button>
+					<div class="dropdown-menu dropdown-menu-right shadow border-0" aria-labelledby="dropdownMenuUser">
+						<a class="dropdown-item" type="button">Ajustes de la cuenta</a>
+						<a class="dropdown-item" type="button">Mi suscripción</a>
+						<a class="dropdown-item" type="button">Desconectarse</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="d-flex justify-content-center" id="loading">
+		<img src="images/loading.gif" alt="">
+	</div>
+	<section id="main">
+	</section>
+	<!-- Importar Bootstrap JS -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

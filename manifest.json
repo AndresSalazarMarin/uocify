@@ -1,0 +1,28 @@
+{
+    "short_name": "Uocify",
+    "name": "Uocify: ¿En busca de música?",
+    "description": "Uocify lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "icons": [
+        {
+            "src": "/images/logos/uocify_icon.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/logos/uocify_icon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/images/logos/uocify_icon.png",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#3367D6"
+}
